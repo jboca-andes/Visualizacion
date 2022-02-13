@@ -68,3 +68,24 @@ En caso de necesitar generar nuevas llaves, pueden realizarlo directamente en ht
 # Reporte
 Vea el reporte en este link
 https://app.powerbi.com/view?r=eyJrIjoiYjczNTM4ZmYtNTdlYS00Mjk2LWE0YWYtY2M3MGJmYzZjMGZlIiwidCI6IjVmZmIyOTg2LTQ2MDctNDQwZS1iYjBmLWQyYjlmZmU2NjZlOSIsImMiOjR9&pageName=ReportSection
+
+## Otros elementos a tener en cuenta
+
+Las personas que ganan en Dolares, son tipicamente las de mayor ingreso general
+![image](https://user-images.githubusercontent.com/92442412/153767241-720b8988-b464-4f53-be87-7cfa19836018.png)
+
+Las personas que tienen entre 11 y 30 años de experiencia, son tipicamente los que mejores bonificaciones u otros pagos reciben
+![image](https://user-images.githubusercontent.com/92442412/153767275-0cc114ac-faeb-446a-a5aa-2c6d699323e4.png)
+
+La industria de la tecnologia tiende a tener mejores salarios anuales
+![image](https://user-images.githubusercontent.com/92442412/153767418-8b888056-c3a5-486e-9ffd-50c5eccbea46.png)
+
+Las personas blancas tienden a tener mejores bonificaciones o mejor esquema de compensación
+![image](https://user-images.githubusercontent.com/92442412/153767386-1ee5923c-cd21-408f-8a91-60016bb69ff3.png)
+
+Las personas con mejores salarios suelen estar entre los 25 y los 44 años
+![image](https://user-images.githubusercontent.com/92442412/153767438-e4efea85-41e7-48e6-b5e9-4d4639f40edb.png)
+
+
+
+
