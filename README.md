@@ -33,8 +33,7 @@ Salario (Moneda Original)	|	Numerico	|	(\d{1,})	|	Salario anual	|	Annual salary	
 Otros pagos (Moneda Original)	|	Numerico	|	(\d{1,})	|	Compensaciones adicionales (Bonos, comisiones) anuales	|	Other monetary comp	|
 Moneda	|	Texto	|	[A-Z]{3}	|	Moneda en la que recibe el pago	|	Currency	|
 Pais	|	Texto	|	([A-Za-z])\w+	|	Pais	|	Country	|
-Estado	|	Texto	|	([A-Za-z])\w+	|	Estado (Si aplica)	|	State	|
-Ciudad	|	Texto	|	([A-Za-z])\w+	|	Ciudad	|	City	|
+Localización	|	Texto	|	([A-Za-z])\w+	|	Localizacion de la persona, de acuerdo a la estructura (Ciudad, Estado, Pais)	|	City	|
 Años de experiencia profesional	|	Texto	|	([A-Za-z])\w+	|	Años de experiencia profesional	|	Overall years of professional experience	|
 Años de experiencia laboral o en campo	|	Texto	|	([A-Za-z])\w+	|	Años de experiencia en campo (Ejecucion)	|	Years of experience in field	|
 Maximo nivel de estudios	|	Texto	|	([A-Za-z])\w+	|	Maximo nivel de estudios completados	|	Highest level of education completed	|
@@ -42,3 +41,25 @@ Genero	|	Texto	|	([A-Za-z])\w+	|	Genero	|	Gender	|
 Raza	|	Texto	|	([A-Za-z])\w+	|	Raza	|	Race	|
 Salario Anual en COP	|	Numerico	|	(\d{1,})	|	Columna generada multiplicando la TRM del dia del procesamiento de los datos de acuerdo a la moneda que se encuentra en la columna Moneda con la columna Salario (Moneda Original)	|	Annual salary * TRM	|
 Salario Anual + Otros pagos en COP	|	Numerico	|	(\d{1,})	|	Columna generada multiplicando la TRM del dia del procesamiento de los datos de acuerdo a la moneda que se encuentra en la columna Moneda de la columna Salario (Moneda Original) + Otros pagos (Moneda Original)	|	(Annual salary + Other monetary comp) * TRM	|
+TRM	|	Numerico	|	(\d{1,})	|	TRM del dia del cargue de los datos (Informacion que se debe extraer a mano de Google, o BANREP)	|		|
+
+![image](https://user-images.githubusercontent.com/92442412/153766581-bfd19dbe-16e7-4fa9-87eb-b8eb0d830d4d.png)
+
+Adicionalmente, se crearon las medidas:
+- [x] Cantidad de respuestas: Corresponde al calculo del conteo de cualquiera de las columnas
+- [x] Salario promedio: Corresponde al Salario Anual promedio en Pesos Colombianos, este campo se deja preparado para cruzar con cualquiera de los campos descriptivos disponibles.
+
+---
+
+## Proceso para el cargue y limpieza de los datos
+Todo el proceso fue realizado en M (Power Query) con el objetivo de simplificar los procesos.
+
+Limpieza de ciudades y paises
+: Con el objetivo de simplificar el proceso de limpieza de este campo, se recurrio al uso del API de Google Maps https://developers.google.com/maps/documentation/places/web-service
+: Se generó una llave de API (No se deja en este texto por motivos de seguridad)
+: Se creó una funcion en PowerQuery que realice el llamado al endpoint https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=<TEXTO QUE QUIEREN BUSCAR>&inputtype=textquery&fields=formatted_address,name&key=********* y que lleva como parametro la concatenacion de las columnas ==City, State, Country== separadas por coma
+: Se ejecutó esta función para 3000 registros, esto debido a que la organizacion no ha aprobado presupuesto para la compra del API y con este número no incurrimos en gastos.
+: Utilizando DAX Studio se exportó toda la información a archivos de texto plano para su posterior procesamiento
+: Se dejó una sola tabla que entrega todo de forma condensada.
+: Se eliminaron las columnas que debido al idioma consideramos que no aportan aún.
+:
