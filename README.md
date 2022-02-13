@@ -66,4 +66,5 @@ Todo el proceso fue realizado en M (Power Query) con el objetivo de simplificar 
 En caso de necesitar generar nuevas llaves, pueden realizarlo directamente en https://console.cloud.google.com/google/maps-apis/overview
 
 # Reporte
-<iframe title="SEMANA 3 - Principal" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiYjczNTM4ZmYtNTdlYS00Mjk2LWE0YWYtY2M3MGJmYzZjMGZlIiwidCI6IjVmZmIyOTg2LTQ2MDctNDQwZS1iYjBmLWQyYjlmZmU2NjZlOSIsImMiOjR9" frameborder="0" allowFullScreen="true"></iframe>
+Vea el reporte en este link
+https://app.powerbi.com/view?r=eyJrIjoiYjczNTM4ZmYtNTdlYS00Mjk2LWE0YWYtY2M3MGJmYzZjMGZlIiwidCI6IjVmZmIyOTg2LTQ2MDctNDQwZS1iYjBmLWQyYjlmZmU2NjZlOSIsImMiOjR9&pageName=ReportSection
