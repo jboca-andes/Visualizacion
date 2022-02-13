@@ -1,6 +1,6 @@
 # Documentacion del modelo
 Columna	|	Tipo de dato	|	Formato	|	Descripcion	|
--	|	-	|	-	|	-	|
+---|---|---|---|
 Timestamp	|	Fecha y hora	|	(\d{1,2})/(\d{1,2})/(\d{4})\s(\d{1,2}):(\d{1,2}):(\d{1,2})\s(AM|PM)	|	Fecha y hora de la captura del dato	|
 How old are you?	|	Texto	|	(\d{1,})-(\d{1,})	|	Grupo etareo de la persona	|
 Industry	|	Texto	|	([A-Za-z])\w+	|	Industria a la que pertenece la persona	|
