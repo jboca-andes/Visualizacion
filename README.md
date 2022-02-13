@@ -57,9 +57,8 @@ Todo el proceso fue realizado en M (Power Query) con el objetivo de simplificar 
 Limpieza de ciudades y paises
 : Con el objetivo de simplificar el proceso de limpieza de este campo, se recurrio al uso del API de Google Maps https://developers.google.com/maps/documentation/places/web-service
 : Se generó una llave de API (No se deja en este texto por motivos de seguridad)
-: Se creó una funcion en PowerQuery que realice el llamado al endpoint https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=<TEXTO QUE QUIEREN BUSCAR>&inputtype=textquery&fields=formatted_address,name&key=********* y que lleva como parametro la concatenacion de las columnas ==City, State, Country== separadas por coma
+: Se creó una funcion en PowerQuery que realice el llamado al endpoint `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=<TEXTO QUE QUIEREN BUSCAR>&inputtype=textquery&fields=formatted_address,name&key=<LLAVE>` y que lleva como parametro la concatenacion de las columnas ==City, State, Country== separadas por coma
 : Se ejecutó esta función para 3000 registros, esto debido a que la organizacion no ha aprobado presupuesto para la compra del API y con este número no incurrimos en gastos.
 : Utilizando DAX Studio se exportó toda la información a archivos de texto plano para su posterior procesamiento
 : Se dejó una sola tabla que entrega todo de forma condensada.
 : Se eliminaron las columnas que debido al idioma consideramos que no aportan aún.
-:
